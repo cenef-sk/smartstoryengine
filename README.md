@@ -1,6 +1,31 @@
-# README #
+# Smart Story Engine #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Simple interpreter for smart stories.
+
+## Installation
+
+<code>npm install</code>.
+
+## Test the software
+
+<code>npm run test</code>.
+
+## Simple engine loop
+
+  import { SmartStoryEngine } from "./app/SmartStoryEngine";
+
+  let engine = SmartStoryEngine.tellTheStory(story);
+  while (engine.hasNext()){
+    let next = engine.next();
+    if(next instanceof Message) {
+      console.log(next.message)
+    }
+  }
+  console.log("END.")
+
+## More
+
+More complex example see in **app.ts**
 
 ## License
 
