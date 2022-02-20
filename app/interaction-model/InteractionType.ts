@@ -1,0 +1,6 @@
+export enum InteractionType {
+  MESSAGE = "MESSAGE",
+  USER_DECISION = "USER_DECISION",
+  USER_INTERACTION = "USER_INTERACTION",
+  END = "END",
+}

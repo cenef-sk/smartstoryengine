@@ -1,0 +1,32 @@
+{price = 0}
+What is your name?
+>
+{
+  "type": "text",
+  "variable": "name",
+  "prompt": "Your name:"
+}
+<
+
+Hello {name}!
+Would you like something to drink?
+* Yes[], please.
+* No[], thank you. -> eat
+What would you like?
+* Tea[], please. {price = price + 1}
+* Coffee[], please. {price = price + 2}
+-> eat
+== eat
+Something to eat?
+* Sandwich[], please. {price = price + 4} // response is evaluated only when chosen
+* Apple[], please. {price =  price + 8}
+* No[], thank you.
+{} // this is hack to split two branches
+* {price > 0}-> pay // ! no space between condition and jump otherwise normal choice must be made
+Have a nice day.
+-> END
+
+== pay
+It would be {price}.
+Bye.
+-> END

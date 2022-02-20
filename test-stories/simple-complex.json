@@ -1,0 +1,956 @@
+{
+  "className": "STORY",
+  "id": "0",
+  "sections": [
+    {
+      "className": "SECTION",
+      "id": "1",
+      "tags": [],
+      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+      "line": 0,
+      "name": "",
+      "subSections": [
+        {
+          "className": "SUBSECTION",
+          "id": "2",
+          "tags": [],
+          "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+          "line": 0,
+          "name": "",
+          "content": [
+            {
+              "className": "PARAGRAPH",
+              "id": "3",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 2,
+              "content": [
+                {
+                  "className": "EXPRESSION",
+                  "id": "unknown",
+                  "tags": [],
+                  "filePath": "unknown",
+                  "line": -1,
+                  "children": [
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [],
+                      "text": "price",
+                      "type": "VARIABLE"
+                    },
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [],
+                      "text": "=",
+                      "type": "OPERATOR"
+                    },
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [],
+                      "text": "0",
+                      "type": "NUMBER"
+                    }
+                  ],
+                  "text": "{price = 0}",
+                  "type": "NESTED_EXPRESSION"
+                }
+              ]
+            },
+            {
+              "className": "PARAGRAPH",
+              "id": "4",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 3,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "5",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 3,
+                  "text": "What is your name?"
+                }
+              ]
+            },
+            {
+              "className": "INPUT",
+              "id": "6",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 10,
+              "json": {
+                "type": "text",
+                "variable": "name",
+                "prompt": "Your name:"
+              }
+            },
+            {
+              "className": "PARAGRAPH",
+              "id": "7",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 11,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "8",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 11,
+                  "text": "Hello "
+                },
+                {
+                  "className": "EXPRESSION",
+                  "id": "unknown",
+                  "tags": [],
+                  "filePath": "unknown",
+                  "line": -1,
+                  "children": [
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [],
+                      "text": "name",
+                      "type": "VARIABLE"
+                    }
+                  ],
+                  "text": "Hello {name}!",
+                  "type": "NESTED_EXPRESSION"
+                },
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "9",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 11,
+                  "text": "!"
+                }
+              ]
+            },
+            {
+              "className": "PARAGRAPH",
+              "id": "10",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 12,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "11",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 12,
+                  "text": "Would you like something to drink?"
+                }
+              ]
+            },
+            {
+              "className": "BRANCH",
+              "id": "12",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 13,
+              "options": [
+                {
+                  "className": "OPTION",
+                  "id": "16",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 13,
+                  "textOption": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "13",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 13,
+                      "text": "Yes"
+                    }
+                  ],
+                  "textResponse": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "14",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 13,
+                      "text": "Yes"
+                    },
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "15",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 13,
+                      "text": ", please."
+                    }
+                  ],
+                  "condition": null,
+                  "jump": null
+                },
+                {
+                  "className": "OPTION",
+                  "id": "21",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 14,
+                  "textOption": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "18",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 14,
+                      "text": "No"
+                    }
+                  ],
+                  "textResponse": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "19",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 14,
+                      "text": "No"
+                    },
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "20",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 14,
+                      "text": ", thank you. "
+                    }
+                  ],
+                  "condition": null,
+                  "jump": {
+                    "className": "JUMP",
+                    "id": "17",
+                    "tags": [],
+                    "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                    "line": 14,
+                    "name": "eat"
+                  }
+                }
+              ]
+            },
+            {
+              "className": "PARAGRAPH",
+              "id": "22",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 15,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "23",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 15,
+                  "text": "What would you like?"
+                }
+              ]
+            },
+            {
+              "className": "BRANCH",
+              "id": "24",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 16,
+              "options": [
+                {
+                  "className": "OPTION",
+                  "id": "28",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 16,
+                  "textOption": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "25",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 16,
+                      "text": "Tea"
+                    }
+                  ],
+                  "textResponse": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "26",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 16,
+                      "text": "Tea"
+                    },
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "27",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 16,
+                      "text": ", please. "
+                    },
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "=",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "+",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "1",
+                          "type": "NUMBER"
+                        }
+                      ],
+                      "text": "price = price + 1",
+                      "type": "NESTED_EXPRESSION"
+                    }
+                  ],
+                  "condition": null,
+                  "jump": null
+                },
+                {
+                  "className": "OPTION",
+                  "id": "32",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 17,
+                  "textOption": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "29",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 17,
+                      "text": "Coffee"
+                    }
+                  ],
+                  "textResponse": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "30",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 17,
+                      "text": "Coffee"
+                    },
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "31",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 17,
+                      "text": ", please. "
+                    },
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "=",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "+",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "2",
+                          "type": "NUMBER"
+                        }
+                      ],
+                      "text": "price = price + 2",
+                      "type": "NESTED_EXPRESSION"
+                    }
+                  ],
+                  "condition": null,
+                  "jump": null
+                }
+              ]
+            },
+            {
+              "className": "JUMP",
+              "id": "33",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 18,
+              "name": "eat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "SECTION",
+      "id": "34",
+      "tags": [],
+      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+      "line": 19,
+      "name": "eat",
+      "subSections": [
+        {
+          "className": "SUBSECTION",
+          "id": "35",
+          "tags": [],
+          "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+          "line": 19,
+          "name": "",
+          "content": [
+            {
+              "className": "PARAGRAPH",
+              "id": "36",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 20,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "37",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 20,
+                  "text": "Something to eat?"
+                }
+              ]
+            },
+            {
+              "className": "BRANCH",
+              "id": "38",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 21,
+              "options": [
+                {
+                  "className": "OPTION",
+                  "id": "42",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 21,
+                  "textOption": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "39",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 21,
+                      "text": "Sandwich"
+                    }
+                  ],
+                  "textResponse": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "40",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 21,
+                      "text": "Sandwich"
+                    },
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "41",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 21,
+                      "text": ", please. "
+                    },
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "=",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "+",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "4",
+                          "type": "NUMBER"
+                        }
+                      ],
+                      "text": "price = price + 4",
+                      "type": "NESTED_EXPRESSION"
+                    }
+                  ],
+                  "condition": null,
+                  "jump": null
+                },
+                {
+                  "className": "OPTION",
+                  "id": "46",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 23,
+                  "textOption": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "43",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 23,
+                      "text": "Apple"
+                    }
+                  ],
+                  "textResponse": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "44",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 23,
+                      "text": "Apple"
+                    },
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "45",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 23,
+                      "text": ", please. "
+                    },
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "=",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "price",
+                          "type": "VARIABLE"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "+",
+                          "type": "OPERATOR"
+                        },
+                        {
+                          "className": "EXPRESSION",
+                          "id": "unknown",
+                          "tags": [],
+                          "filePath": "unknown",
+                          "line": -1,
+                          "children": [],
+                          "text": "8",
+                          "type": "NUMBER"
+                        }
+                      ],
+                      "text": "price =  price + 8",
+                      "type": "NESTED_EXPRESSION"
+                    }
+                  ],
+                  "condition": null,
+                  "jump": null
+                },
+                {
+                  "className": "OPTION",
+                  "id": "50",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 24,
+                  "textOption": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "47",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 24,
+                      "text": "No"
+                    }
+                  ],
+                  "textResponse": [
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "48",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 24,
+                      "text": "No"
+                    },
+                    {
+                      "className": "TEXT_CONTENT",
+                      "id": "49",
+                      "tags": [],
+                      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                      "line": 24,
+                      "text": ", thank you."
+                    }
+                  ],
+                  "condition": null,
+                  "jump": null
+                }
+              ]
+            },
+            {
+              "className": "PARAGRAPH",
+              "id": "51",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 25,
+              "content": []
+            },
+            {
+              "className": "BRANCH",
+              "id": "52",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 26,
+              "options": [
+                {
+                  "className": "OPTION",
+                  "id": "54",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 26,
+                  "textOption": [],
+                  "textResponse": [],
+                  "condition": {
+                    "className": "EXPRESSION",
+                    "id": "unknown",
+                    "tags": [],
+                    "filePath": "unknown",
+                    "line": -1,
+                    "children": [
+                      {
+                        "className": "EXPRESSION",
+                        "id": "unknown",
+                        "tags": [],
+                        "filePath": "unknown",
+                        "line": -1,
+                        "children": [],
+                        "text": "price",
+                        "type": "VARIABLE"
+                      },
+                      {
+                        "className": "EXPRESSION",
+                        "id": "unknown",
+                        "tags": [],
+                        "filePath": "unknown",
+                        "line": -1,
+                        "children": [],
+                        "text": ">",
+                        "type": "OPERATOR"
+                      },
+                      {
+                        "className": "EXPRESSION",
+                        "id": "unknown",
+                        "tags": [],
+                        "filePath": "unknown",
+                        "line": -1,
+                        "children": [],
+                        "text": "0",
+                        "type": "NUMBER"
+                      }
+                    ],
+                    "text": "price > 0",
+                    "type": "NESTED_EXPRESSION"
+                  },
+                  "jump": {
+                    "className": "JUMP",
+                    "id": "53",
+                    "tags": [],
+                    "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                    "line": 26,
+                    "name": "pay"
+                  }
+                }
+              ]
+            },
+            {
+              "className": "PARAGRAPH",
+              "id": "55",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 27,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "56",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 27,
+                  "text": "Have a nice day."
+                }
+              ]
+            },
+            {
+              "className": "END",
+              "id": "57",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "SECTION",
+      "id": "58",
+      "tags": [],
+      "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+      "line": 29,
+      "name": "pay",
+      "subSections": [
+        {
+          "className": "SUBSECTION",
+          "id": "59",
+          "tags": [],
+          "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+          "line": 29,
+          "name": "",
+          "content": [
+            {
+              "className": "PARAGRAPH",
+              "id": "60",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 30,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "61",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 30,
+                  "text": "It would be "
+                },
+                {
+                  "className": "EXPRESSION",
+                  "id": "unknown",
+                  "tags": [],
+                  "filePath": "unknown",
+                  "line": -1,
+                  "children": [
+                    {
+                      "className": "EXPRESSION",
+                      "id": "unknown",
+                      "tags": [],
+                      "filePath": "unknown",
+                      "line": -1,
+                      "children": [],
+                      "text": "price",
+                      "type": "VARIABLE"
+                    }
+                  ],
+                  "text": "It would be {price}.",
+                  "type": "NESTED_EXPRESSION"
+                },
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "62",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 30,
+                  "text": "."
+                }
+              ]
+            },
+            {
+              "className": "PARAGRAPH",
+              "id": "63",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 31,
+              "content": [
+                {
+                  "className": "TEXT_CONTENT",
+                  "id": "64",
+                  "tags": [],
+                  "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+                  "line": 31,
+                  "text": "Bye."
+                }
+              ]
+            },
+            {
+              "className": "END",
+              "id": "65",
+              "tags": [],
+              "filePath": "../smartstoryengine/test-stories/simple-complex.sslng",
+              "line": 32
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
