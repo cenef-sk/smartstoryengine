@@ -12,6 +12,7 @@ Simple interpreter for smart stories.
 
 ## Simple engine loop
 
+```typescript
   import { SmartStoryEngine } from "./app/SmartStoryEngine";
 
   let engine = SmartStoryEngine.tellTheStory(story);
@@ -22,7 +23,7 @@ Simple interpreter for smart stories.
     }
   }
   console.log("END.")
-
+```
 ## More
 
 More complex example see in **app.ts**
