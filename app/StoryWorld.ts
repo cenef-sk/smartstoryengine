@@ -30,8 +30,8 @@ export class StoryWorld {
   getVariable(name: string): any {
     return this.state[name]
   }
-  interactionUpdate(stateId: string, input: any) {
-    this.interactionHistory = this.interactionHistory.concat(new Interaction(stateId, input))
+  interactionUpdate(stateId: string, input: any, dateTime?: Date) {
+    this.interactionHistory = this.interactionHistory.concat((dateTime)?new Interaction(stateId, input, dateTime):new Interaction(stateId, input))
   }
   currentInteractionStateId(){
     if (this.interactionHistory.length) {

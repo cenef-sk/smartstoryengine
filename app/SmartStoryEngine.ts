@@ -38,24 +38,29 @@ export class SmartStoryEngine {
     let res = ""; // it will be any or specific object, INPUT, BRANCH, TEXT
     // let curr = this.story.sections[0].subsections[0];
 
+    let dateTime = yield;
     this.current =  this.story.first(this.world);
     while (!(this.current instanceof End)) {
       if (this.current instanceof Paragraph) {
         let res = new Message(this.current.eval(this.world));
         res.addTags(this.current.tags);
-        this.world.interactionUpdate(this.current.id, null);
-        yield res;
+        if (dateTime) {
+          this.world.interactionUpdate(this.current.id, null, dateTime);
+        } else {
+          this.world.interactionUpdate(this.current.id, null);
+        }
+        dateTime = yield res;
         this.current = this.story.next(this.current.id, this.world);
       } else if (this.current instanceof Branch) {
         let res = new UserDecision(this.current.options.map(option => option.option(this.world)));
         // todo tags
-        yield res;
+        dateTime = yield res;
         this.current = this.story.next(this.current.id, this.world);
         //TODO check if input is provided
       } else if (this.current instanceof Input) {
         let res = new UserInteraction(this.current.json);
         //todo tags
-        yield res;
+        dateTime = yield res;
         this.current = this.story.next(this.current.id, this.world);
         //TODO check if input is provded
       } else {
@@ -63,7 +68,11 @@ export class SmartStoryEngine {
         throw new Error("Unexpected type of node!");
       }
     }
-    this.world.interactionUpdate(this.current.id, null);
+    if (dateTime) {
+      this.world.interactionUpdate(this.current.id, null, dateTime);
+    } else {
+      this.world.interactionUpdate(this.current.id, null);
+    }
     this.world.finished = true;
     return new EndOfStory();
   }
@@ -76,10 +85,10 @@ export class SmartStoryEngine {
       }
   }
 
-  next(): Message | UserDecision | UserInteraction | EndOfStory {
+  next(dateTime?: Date): Message | UserDecision | UserInteraction | EndOfStory {
     // waiting for Input
     // no input provided
-    let nextNode = this.storyIterator.next();
+    let nextNode = (dateTime)?this.storyIterator.next(dateTime):this.storyIterator.next();
     if (nextNode instanceof UserDecision) {
       this.decisionNeeded = true;
     }
@@ -92,14 +101,18 @@ export class SmartStoryEngine {
     // }
   }
 
-  makeAChoice(choice: number): string {
+  makeAChoice(choice: number, dateTime?: Date): string {
     this.decisionNeeded = false;
     //set history
     // update world
     let res = "";
     if (this.current instanceof Branch) {
       let branch = this.current;
-      this.world.interactionUpdate(this.current.id, choice);
+      if(dateTime) {
+        this.world.interactionUpdate(this.current.id, choice, dateTime);
+      } else {
+        this.world.interactionUpdate(this.current.id, choice);
+      }
       branch.makeAChoice(choice);
       let option = branch.options[choice]
       res = option.response(this.world)
@@ -108,12 +121,16 @@ export class SmartStoryEngine {
     return res;
   }
 
-  provideAnInput(inputObj: any): string{
+  provideAnInput(inputObj: any, dateTime?: Date): string{
     this.inputNeeded = false;
     // I should set something variable from object with object ...
     if (this.current instanceof Input) {
       let json = this.current.json
-      this.world.interactionUpdate(this.current.id, inputObj);
+      if(dateTime) {
+        this.world.interactionUpdate(this.current.id, inputObj, dateTime);
+      } else {
+        this.world.interactionUpdate(this.current.id, inputObj);
+      }
       if (json.variable) {
         this.world.setVariable(json.variable, inputObj)
       }
@@ -124,7 +141,9 @@ export class SmartStoryEngine {
   }
 
   static tellTheStory(jsonStory: any) {
-    return new SmartStoryEngine(Story.deserialize(jsonStory));
+    let story = new SmartStoryEngine(Story.deserialize(jsonStory));
+    story.next();
+    return story;
   }
 
   save() {
@@ -134,11 +153,11 @@ export class SmartStoryEngine {
   load (interactionHistory: Interaction[]) {
     // this.reset(); // do not reset - variables will be reset
     interactionHistory.forEach(interaction => {
-        let curr = this.next();
+        let curr = this.next(interaction.dateTime);
         if (curr instanceof UserDecision) {
-          this.makeAChoice(interaction.input);
+          this.makeAChoice(interaction.input, interaction.dateTime);
         } else if (curr instanceof UserInteraction) {
-          this.provideAnInput(interaction.input);
+          this.provideAnInput(interaction.input, interaction.dateTime);
         }
     });
   }

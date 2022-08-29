@@ -66,6 +66,11 @@ describe('SmartStoryEngine is able to', () => {
      let smartStory4 = SmartStoryEngine.tellTheStory(simpleComplexStory);
      smartStory4.load(persistedState3);
      expect(smartStory4.hasNext()).toBe(false);
+
+     expect(persistedState1[0].dateTime).toStrictEqual(persistedState2[0].dateTime)
+     expect(persistedState1[0].dateTime).toStrictEqual(persistedState3[0].dateTime)
+     expect(persistedState1[1].dateTime).toStrictEqual(persistedState2[1].dateTime)
+     expect(persistedState1[1].dateTime).toStrictEqual(persistedState3[1].dateTime)
   });
 
   // test('one line story', () => {
